@@ -1,0 +1,18 @@
+:root {
+    --Dark_Shade_100: #1F2041;
+    --Dark_Shade_75: rgba(31, 32, 65, 0.75);
+    --Dark_Shade_50: rgba(31, 32, 65, 0.5);
+    --Dark_Shade_25: rgba(31, 32, 65, 0.25);
+    --Dark_Shade_5: rgba(31, 32, 65, 0.05);
+    --Purple: #BC9CFF;
+    --Green: #6FCF97;
+    --font_Montserra: 'Montserrat', sans-serif;
+    --H1_size: 24px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font_Montserra);
+}
