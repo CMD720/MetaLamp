@@ -1,11 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Title</title>
-</head>
-<body>
+:root {
+    --Dark_Shade_100: #1F2041;
+    --Dark_Shade_75: rgba(31, 32, 65, 0.75);
+    --Dark_Shade_50: rgba(31, 32, 65, 0.5);
+    --Dark_Shade_25: rgba(31, 32, 65, 0.25);
+    --Dark_Shade_5: rgba(31, 32, 65, 0.05);
+    --Purple: #BC9CFF;
+    --Green: #6FCF97;
+    --font_Montserra: 'Montserrat', sans-serif;
+    --H1_size: 24px;
+    --Primary_Gradient : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
 
-</body>
-</html>
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: var(--font_Montserra);
+}
+
+.click_button_box {
+    width: 99px;
+    height: 44px;
+    background: var(--Primary_Gradient);
+    border-radius: 22px;
+    display: flex; 
+}
+.click_button_text {
+    width: 59px;
+    height: 15px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 15px 20px 15px 20px;
+}
+.click_button_box:hover{
+    opacity: .5;
+    cursor: pointer;
+}

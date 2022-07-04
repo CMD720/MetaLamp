@@ -8,6 +8,7 @@
     --Green: #6FCF97;
     --font_Montserra: 'Montserrat', sans-serif;
     --H1_size: 24px;
+    --Primary_Gradient : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
 *{

@@ -20,30 +20,3 @@
     font-family: var(--font_Montserra);
 }
 
-.button_boeder_box {
-    width: 95px;
-    height: 40px;
-    border-radius: 22px;
-    display: flex;
-    /*background: linear-gradient(#fff, #fff) padding-box ,linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) border-box;*/
-    background: var(--Border_Gradient);
-    border: 2px solid transparent;
-}
-
-.button_border_text {
-    width: 59px;
-    height: 15px;
-    text-align: center;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #BC9CFF;
-    padding: 13px 18px 15px 18px;
-}
-
-.button_boeder_box:hover{
-    opacity: .5;
-    cursor: pointer;
-}

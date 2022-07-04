@@ -5,10 +5,12 @@
     --Dark_Shade_25: rgba(31, 32, 65, 0.25);
     --Dark_Shade_5: rgba(31, 32, 65, 0.05);
     --Purple: #BC9CFF;
+    --Blue: #8BA4F9;
     --Green: #6FCF97;
     --font_Montserra: 'Montserrat', sans-serif;
     --H1_size: 24px;
     --Primary_Gradient : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    --Border_Gradient : linear-gradient(#fff, #fff) padding-box ,linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) border-box;
 }
 
 *{
@@ -18,41 +20,26 @@
     font-family: var(--font_Montserra);
 }
 
-
-.rectangle_2{
-    width: 320px;
-    height: 44px;
-    background: var(--Primary_Gradient);
-    border-radius: 22px;
+.button_link {
     display: flex;
-    position: relative;
+    /*border: 1px solid var(--Green);*/
+    height: fit-content;
+    width: fit-content;
 }
-.span_button_text{
-    width: 280px;
-    height: 15px;
+
+
+.link {
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
-    /* identical to box height */
-    text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
-    padding:14px 20px 15px 20px;
+    
 }
-.wrapper_arrow{
-    position: absolute;
-    right: 0;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.button_link  a{
+    color: var(--Purple);
+    text-decoration: none;
 }
-.span_arrow_right{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    color: #FFFFFF;
+.button_link a:hover{
+    color: var(--Dark_Shade_50);
 }
