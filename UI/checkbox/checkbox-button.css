@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     width: 222px;
+    margin: 0 0 0 2px;
 }
 
 /*CHECK*/
@@ -53,12 +54,11 @@
     width: 18px;
     height: 18px;
     background: transparent;
-    border: 1px solid var(--Purple);
+    border: 1px solid var(--Dark_Shade_25);
     border-radius: 4px;
 }
 
 .check__box__tick {
-    /*display: block;*/
     display: none;
     position: absolute;
     right: 6px;
@@ -71,11 +71,19 @@
 }
 
 /*CHECKED*/
-.check__input:checked+.check__box{
-    .check__box__tick {
-       display: block;
-        }
+.check__input:checked + .check__box .check__box__tick {
+    display: block;
 }
-/*.check__input:checked+.check__box{*/
-/*    background: #6FCF97;*/
+.check__input:checked + .check__box {
+    border: 1px solid var(--Purple);
+}
+
+/*FOCUSED*/
+/*.check__input:focus + .check__box {*/
+/*    border: 1px solid var(--Purple);*/
 /*}*/
+
+/*HOVER*/
+.check__input:hover + .check__box {
+    border: 1px solid var(--Purple);
+}

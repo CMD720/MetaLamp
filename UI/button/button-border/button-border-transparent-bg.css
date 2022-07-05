@@ -1,0 +1,72 @@
+:root {
+    --Dark_Shade_100: #1F2041;
+    --Dark_Shade_75: rgba(31, 32, 65, 0.75);
+    --Dark_Shade_50: rgba(31, 32, 65, 0.5);
+    --Dark_Shade_25: rgba(31, 32, 65, 0.25);
+    --Dark_Shade_5: rgba(31, 32, 65, 0.05);
+    --Purple: #BC9CFF;
+    --Blue: #8BA4F9;
+    --Green: #6FCF97;
+    --font_Montserra: 'Montserrat', sans-serif;
+    --H1_size: 24px;
+    --Primary_Gradient : linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%);
+    --Border_Gradient : linear-gradient(#fff, #fff) padding-box ,linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: var(--font_Montserra);
+}
+
+/*body{
+    background: lightgray;
+}*/
+
+.button_border_box {
+  width: 95px;
+  height: 40px;
+  border-radius: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*background: linear-gradient(#fff, #fff) padding-box ,linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) border-box;*/
+  border: 2px solid transparent;
+  position: relative;
+}
+.button_border_box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Primary_Gradient);
+  border: inherit;
+  border-radius: inherit;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) padding-box, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  -webkit-mask: linear-gradient(#fff, #fff) padding-box, linear-gradient(#fff, #fff);
+          mask: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) padding-box, -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+          mask: linear-gradient(#fff, #fff) padding-box, linear-gradient(#fff, #fff);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.button_border_text {
+    width: 59px;
+    height: 15px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+    padding: 15px 18px 15px 18px;
+}
+
+.button_border_box:hover{
+    opacity: .5;
+    cursor: pointer;
+}

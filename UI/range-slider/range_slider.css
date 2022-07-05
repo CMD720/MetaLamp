@@ -9,8 +9,8 @@
     --Green: #6FCF97;
     --font_Montserra: 'Montserrat', sans-serif;
     --H1_size: 24px;
-    --Primary_Gradient : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    --Border_Gradient : linear-gradient(#fff, #fff) padding-box ,linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) border-box;
+    --Primary_Gradient : linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%);
+    --Border_Gradient : linear-gradient(#fff, #fff) padding-box ,linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) border-box;
 }
 
 *{
