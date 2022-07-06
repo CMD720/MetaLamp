@@ -1,0 +1,109 @@
+:root {
+    --Dark_Shade_100: #1F2041;
+    --Dark_Shade_75: rgba(31, 32, 65, 0.75);
+    --Dark_Shade_50: rgba(31, 32, 65, 0.5);
+    --Dark_Shade_25: rgba(31, 32, 65, 0.25);
+    --Dark_Shade_5: rgba(31, 32, 65, 0.05);
+    --Purple: #BC9CFF;
+    --Blue: #8BA4F9;
+    --Green: #6FCF97;
+    --font_Montserra: "Montserrat", sans-serif;
+    --H1_size: 24px;
+    --Primary_Gradient: linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%);
+    --Border_Radius_Gradient: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) border-box;
+    --Border_Gradient: linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: var(--font_Montserra);
+    color: rgba(31, 32, 65, 0.25);
+}
+
+.rate__choice {
+    position: relative;
+    font-size: 30px;
+    display: inline-block;
+    color: var(--Dark_Shade_25);
+}
+.rate__choice::before {
+    content: "★★★★★";
+    display: block;
+    color: #6FCF97;
+}
+.rate__items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+/*CHECK*/
+.rate__item__label {
+    flex: 0 0 20%;
+    height: 100%;
+    cursor: pointer;
+    color: transparent;
+    /*color: rgba(31, 32, 65, 0.1);   !*dark_shade_10*!*/
+}
+.rate__item__label::before{
+    /*content: "★";*/
+    /*display: block;*/
+    /*transition: color .3s ease 0s;*/
+}
+/*.rate__item__label::before + .rate__star__box .rate__star{*/
+/*    content: "";*/
+/*    background-image: url("star_border.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center center;*/
+/*}*/
+.rate__star__box{
+    /*position: relative;*/
+    width: 24px;
+    height: 24px;
+    background-size: auto;
+    background-color: transparent;
+    border: 2px solid #6FCF97;
+}
+.rate__star{
+    
+    background-image: url("star_border.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.rate__star::before{
+
+}
+/*--hide standard radio--*/
+.rate__item__radio {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /*width: 0%;*/
+    /*height: 0%;*/
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+    /*top: 0;*/
+    /*left: 0;*/
+}
+
+
+/*CHECKED*/
+/*.rate__item__radio:checked,*/
+/*.rate__item__radio:checked ~ .rate__item__label{*/
+/*    */
+/*}*/
+
+/*HOVER*/
+/*.rate__item__label:hover,*/
+/*.rate__item__label:hover ~ .rate__item__label,*/
+/*.rate__item__label:checked ~ .rate__item__label:hover{*/
+/*    content: url(star.png);*/
+/*}*/

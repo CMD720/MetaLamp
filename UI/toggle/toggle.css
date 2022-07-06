@@ -21,75 +21,62 @@
     font-family: var(--font_Montserra);
 }
 
-.gender-choice {
-    width: auto;
-    margin: 2px 0 0 2px;
-
-}
-
 /*CHECK*/
-.radio {
-    padding-left: 30px;
-    margin-right: 16px;
+.toggle {
+    padding-left: 50px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 18px;
-    color: var(--Dark_Shade_50);
+    line-height: 24px;
+    color: var(--Dark_Shade_75);
     /*cursor: pointer;*/
 }
 
-.radio__check {
+.toggle__check {
     position: absolute;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
 
-.radio__box {
-    margin-left: -30px;
+.toggle__box {
+    margin-left: -50px;
     position: absolute;
     top: 3px;
-    width: 18px;
+    width: 38px;
     height: 18px;
     background: transparent;
     border: 1px solid var(--Dark_Shade_25);
     border-radius: 10px;
 }
-.radio__wrapper{
-    background: transparent;
-}
 
-.radio__box__circle {
-    /*display: block;*/
-    display: none;
+.toggle__box__circle {
+    display: block;
     position: absolute;
-    right: 3px;
+    right: 23px;
     top: 3px;
     width: 12px;
     height: 12px;
-    background: var(--Primary_Gradient);
+    background: var(--Dark_Shade_25);
     border-radius: 10px;
+    transition: all , .2s;
 }
 
 /*CHECKED*/
-.radio__check:checked + .radio__wrapper .radio__box .radio__box__circle {
-    display: block;
+.toggle__check:checked + .toggle__box .toggle__box__circle {
+    right: 3px;
+    background: var(--Primary_Gradient);
+    transition-duration: .2s;
 }
-.radio__check:checked + .radio__wrapper .radio__box {
+.toggle__check:checked + .toggle__box {
     border: 1px solid var(--Purple);
-}
-.radio__check:checked + .radio__wrapper .radio__gender {
-    color: var(--Dark_Shade_75);
 }
 
 /*FOCUSED*/
 
 
 /*HOVER*/
-.radio__check:hover + .radio__wrapper .radio__box {
+.toggle__check:hover + .toggle__box {
     border: 1px solid var(--Purple);
 }
-.radio__check:hover + .radio__wrapper .radio__gender {
-    color: var(--Dark_Shade_75);
-}
+

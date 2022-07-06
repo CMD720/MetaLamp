@@ -21,75 +21,71 @@
     font-family: var(--font_Montserra);
 }
 
-.gender-choice {
-    width: auto;
-    margin: 2px 0 0 2px;
-
-}
-
 /*CHECK*/
-.radio {
-    padding-left: 30px;
-    margin-right: 16px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: var(--Dark_Shade_50);
+.like {
+    /*padding-left: 50px;*/
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+    /*font-size: 14px;*/
+    /*line-height: 24px;*/
+    /*color: var(--Dark_Shade_75);*/
     /*cursor: pointer;*/
 }
 
-.radio__check {
+.like__check {
     position: absolute;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
 
-.radio__box {
-    margin-left: -30px;
+.like__box {
+    /*margin-left: -50px;*/
     position: absolute;
     top: 3px;
-    width: 18px;
+    left: 3px;
+    width: 38px;
     height: 18px;
     background: transparent;
     border: 1px solid var(--Dark_Shade_25);
     border-radius: 10px;
-}
-.radio__wrapper{
-    background: transparent;
-}
-
-.radio__box__circle {
-    /*display: block;*/
-    display: none;
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    width: 12px;
-    height: 12px;
-    background: var(--Primary_Gradient);
-    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+.like__icon{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url(favorite_border.png);
+}
+.like__count{
+    width: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--Dark_Shade_25);
+
+}
 /*CHECKED*/
-.radio__check:checked + .radio__wrapper .radio__box .radio__box__circle {
-    display: block;
-}
-.radio__check:checked + .radio__wrapper .radio__box {
+.like__check:checked + .like__box {
     border: 1px solid var(--Purple);
 }
-.radio__check:checked + .radio__wrapper .radio__gender {
-    color: var(--Dark_Shade_75);
+.like__check:checked + .like__box .like__icon{
+    background-image: url(favorite.png);
 }
-
+.like__check:checked + .like__box .like__count {
+    color: var(--Purple);
+}
 /*FOCUSED*/
 
-
 /*HOVER*/
-.radio__check:hover + .radio__wrapper .radio__box {
+.like__check:hover + .like__box {
     border: 1px solid var(--Purple);
 }
-.radio__check:hover + .radio__wrapper .radio__gender {
-    color: var(--Dark_Shade_75);
-}
+

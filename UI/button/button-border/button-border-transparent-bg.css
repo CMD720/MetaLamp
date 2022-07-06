@@ -54,8 +54,6 @@
 }
 
 .button_border_text {
-    width: 59px;
-    height: 15px;
     text-align: center;
     font-style: normal;
     font-weight: 700;
@@ -63,7 +61,7 @@
     line-height: 15px;
     text-transform: uppercase;
     color: #BC9CFF;
-    padding: 15px 18px 15px 18px;
+    padding: 14px 15px 13px 19px;
 }
 
 .button_border_box:hover{

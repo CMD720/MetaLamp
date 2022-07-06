@@ -1,0 +1,80 @@
+:root {
+    --Dark_Shade_100: #1F2041;
+    --Dark_Shade_75: rgba(31, 32, 65, 0.75);
+    --Dark_Shade_50: rgba(31, 32, 65, 0.5);
+    --Dark_Shade_25: rgba(31, 32, 65, 0.25);
+    --Dark_Shade_5: rgba(31, 32, 65, 0.05);
+    --Purple: #BC9CFF;
+    --Blue: #8BA4F9;
+    --Green: #6FCF97;
+    --font_Montserra: "Montserrat", sans-serif;
+    --H1_size: 24px;
+    --Primary_Gradient: linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%);
+    --Border_Radius_Gradient: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) border-box;
+    --Border_Gradient: linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: var(--font_Montserra);
+    /*color: rgba(31, 32, 65, 0.05);*/
+    /*color: var(--Dark_Shade_5)*/
+}
+
+.rate__choice {
+    position: relative;
+    font-size: 40px;
+    display: inline-block;
+    /*color: var(--Dark_Shade_5);*/
+}
+/*.rate__choice::before {*/
+/*    content: "★★★★★";*/
+/*    display: block;*/
+/*}*/
+.rate__items {
+    /*////////???///////*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*////////???///////*/
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/*CHECK*/
+.rate__item__label {
+    flex: 0 0 20%;
+    height: 100%;
+    cursor: pointer;
+    color: rgba(31, 32, 65, 0.1);   /*dark_shade_10*/
+}
+.rate__item__label::before{
+    content: "★";
+    display: block;
+    transition: color .3s ease 0s;
+}
+.rate__item__radio {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/*CHECKED*/
+.rate__item__radio:checked,
+.rate__item__radio:checked ~ .rate__item__label{
+    background: var(--Primary_Gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*HOVER*/
+.rate__item__label:hover,
+.rate__item__label:hover ~ .rate__item__label,
+.rate__item__label:checked ~ .rate__item__label:hover{
+    color: var(--Dark_Shade_50);
+}
