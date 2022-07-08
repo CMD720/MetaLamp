@@ -29,7 +29,7 @@
     font-size: 14px;
     line-height: 24px;
     color: var(--Dark_Shade_75);
-    /*cursor: pointer;*/
+    cursor: pointer;
 }
 
 .toggle__check {
@@ -59,22 +59,19 @@
     height: 12px;
     background: var(--Dark_Shade_25);
     border-radius: 10px;
-    transition: all , .2s;
+    /*transition: all , .2s ease-in-out;*/
 }
 
 /*CHECKED*/
 .toggle__check:checked + .toggle__box .toggle__box__circle {
     right: 3px;
     background: var(--Primary_Gradient);
-    transition-duration: .2s;
+    /*transition-duration: .2s;*/
 }
 .toggle__check:checked + .toggle__box {
     border: 1px solid var(--Purple);
 }
-
 /*FOCUSED*/
-
-
 /*HOVER*/
 .toggle__check:hover + .toggle__box {
     border: 1px solid var(--Purple);

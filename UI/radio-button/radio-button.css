@@ -82,10 +82,7 @@
 .radio__check:checked + .radio__wrapper .radio__gender {
     color: var(--Dark_Shade_75);
 }
-
 /*FOCUSED*/
-
-
 /*HOVER*/
 .radio__check:hover + .radio__wrapper .radio__box {
     border: 1px solid var(--Purple);

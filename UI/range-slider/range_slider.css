@@ -10,6 +10,7 @@
     --font_Montserra: 'Montserrat', sans-serif;
     --H1_size: 24px;
     --Primary_Gradient : linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%);
+    --Secondary_Gradient : linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     --Border_Gradient : linear-gradient(#fff, #fff) padding-box ,linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) border-box;
 }
 
@@ -20,3 +21,112 @@
     font-family: var(--font_Montserra);
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+}
+
+.middle {
+    position: relative;
+    width: 50%;
+    max-width: 266px;
+    /*height: 100px;*/
+    /*background-color: rgba(0,0,0,.1);*/
+}
+/*.multi-rage-slider {}*/
+.slider {
+    position: relative;
+    z-index: 1;
+    height: 6px;
+    margin: 0 10px;
+}
+.slider > .track{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 3px;
+    border: 1px solid var(--Dark_Shade_25);
+    background-color: #FFFFFF;
+}
+.slider > .range{
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 3px;
+    background-color: var(--Green);
+    background: var(--Secondary_Gradient);
+}
+.slider > .thumb{
+    position: absolute;
+    z-index: 3;
+    width: 13px;
+    height: 13px;
+    top: 4px;
+    border-radius: 50%;
+    border: 2px solid  rgba(255, 255, 255, 1);
+    background-color: var(--Green);
+    background: var(--Secondary_Gradient);
+    box-shadow: 0 0 0 0 rgba(98,0,23,.1);
+    transition: box-shadow .3s ease-in-out;
+    /*opacity: .3;*/
+}
+.slider > .thumb.left{
+    left: 25%;
+    transform: translate(-10px, -10px);
+}
+.slider > .thumb.right{
+    right: 25%;
+    transform: translate(10px, -10px);
+}
+.slider > .thumb.hover{
+    /*box-shadow: 0 0 0 3px rgba(98,0,23,.1);*/
+    box-shadow: 0 0 0 3px rgba(31, 32, 65, .1);
+}
+.slider > .track.hover{
+    border: 1px solid var(--Dark_Shade_50);
+}
+.slider > .thumb.active{
+    box-shadow: 0 0 0 3px rgba(98,0,23,.2);
+}
+
+input[type=range]{
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 100%;
+    /*top: -50px;*/
+    opacity: 0;
+}
+input[type=range]::-webkit-slider-thumb{
+    pointer-events: all;
+    width: 13px;
+    height: 13px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    -webkit-appearance: none;
+}
+/*#input-left{*/
+/*    top: -100px;*/
+/*}*/
+/*#input-right{*/
+/*    top: -50px;*/
+/*}*/
+.track {}
+.range {}
+.thumb {}
+.left {}
+.right {}
