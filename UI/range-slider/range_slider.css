@@ -17,7 +17,6 @@
 *{
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/
     font-family: var(--font_Montserra);
 }
 
@@ -35,10 +34,7 @@ body{
     position: relative;
     width: 50%;
     max-width: 266px;
-    /*height: 100px;*/
-    /*background-color: rgba(0,0,0,.1);*/
 }
-/*.multi-rage-slider {}*/
 .slider {
     position: relative;
     z-index: 1;
@@ -73,13 +69,12 @@ body{
     width: 13px;
     height: 13px;
     top: 4px;
-    border-radius: 50%;
+    border-radius: 10px;
     border: 2px solid  rgba(255, 255, 255, 1);
     background-color: var(--Green);
     background: var(--Secondary_Gradient);
     box-shadow: 0 0 0 0 rgba(98,0,23,.1);
     transition: box-shadow .3s ease-in-out;
-    /*opacity: .3;*/
 }
 .slider > .thumb.left{
     left: 25%;
@@ -90,14 +85,13 @@ body{
     transform: translate(10px, -10px);
 }
 .slider > .thumb.hover{
-    /*box-shadow: 0 0 0 3px rgba(98,0,23,.1);*/
-    box-shadow: 0 0 0 3px rgba(31, 32, 65, .1);
+    box-shadow: 0 0 0 3px rgba(31, 32, 65, 0.1);
 }
 .slider > .track.hover{
     border: 1px solid var(--Dark_Shade_50);
 }
 .slider > .thumb.active{
-    box-shadow: 0 0 0 3px rgba(98,0,23,.2);
+    box-shadow: 0 0 0 4px rgba(31, 32, 65, 0.1);
 }
 
 input[type=range]{
@@ -108,16 +102,46 @@ input[type=range]{
     height: 10px;
     width: 100%;
     /*top: -50px;*/
+    /*opacity: .3;*/
     opacity: 0;
 }
 input[type=range]::-webkit-slider-thumb{
     pointer-events: all;
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     border-radius: 0;
     border: 0 none;
     background-color: red;
     -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.title{
+    width: 121px;
+    height: 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--Dark_Shade_100);
+}
+.title-value{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.rangeValues{
+    width: 102px;
+    height: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: var(--Dark_Shade_50);
+
 }
 /*#input-left{*/
 /*    top: -100px;*/
@@ -125,8 +149,3 @@ input[type=range]::-webkit-slider-thumb{
 /*#input-right{*/
 /*    top: -50px;*/
 /*}*/
-.track {}
-.range {}
-.thumb {}
-.left {}
-.right {}

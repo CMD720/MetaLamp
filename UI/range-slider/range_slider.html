@@ -11,9 +11,14 @@
 </head>
 <body>
     <div class="middle">
+        <div class="title-value">
+            <span class="title">диапазон цены</span>
+            <span class="rangeValues"></span>
+        </div>
+
         <div class="multi-rage-slider">
-            <input type="range" id="input-left" min="0" max="102" value="25">
-            <input type="range" id="input-right" min="-2" max="100" value="75">
+            <input type="range" id="input-left" min="1000" max="15000" step="100" value="5000">
+            <input type="range" id="input-right" min="1000" max="15000" step="100" value="10000">
 
             <div class="slider">
                 <div class="track"></div>
@@ -24,76 +29,6 @@
         </div>
     </div>
 
-<script>
-
-var inputLeft = document.getElementById("input-left")
-var inputRight = document.getElementById("input-right")
-
-var thumbLeft = document.querySelector(".slider > .thumb.left")
-var thumbRight = document.querySelector(".slider > .thumb.right")
-var range = document.querySelector(".slider > .range")
-var track = document.querySelector(".slider > .track")
-
-function setLeftValue() {
-    var _this = inputLeft,
-        min = parseInt(_this.min),
-        max = parseInt(_this.max);
-
-    _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value)-1)
-
-    var percent = ((_this.value - min-1) / (max - min)) * 100;
-    thumbLeft.style.left = percent + "%";
-    range.style.left = percent + "%";
-}
-setLeftValue();
-
-function setRightValue() {
-    var _this = inputRight,
-        min = parseInt(_this.min),
-        max = parseInt(_this.max);
-
-    _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value)+1)
-
-    var percent = ((_this.value - min+1) / (max - min)) * 100;
-    thumbRight.style.right =(100 - percent)  + "%";
-    range.style.right = (100 - percent) + "%";
-}
-setRightValue();
-
-inputLeft.addEventListener("input", setLeftValue)
-inputRight.addEventListener("input", setRightValue)
-
-// ------hover------
-inputLeft.addEventListener("mouseover", function(){
-    thumbLeft.classList.add("hover");
-    track.classList.add("hover");
-});
-inputLeft.addEventListener("mouseout", function(){
-    thumbLeft.classList.remove("hover");
-    track.classList.remove("hover");
-});
-inputRight.addEventListener("mouseover", function(){
-    thumbRight.classList.add("hover");
-    track.classList.add("hover");
-});
-inputRight.addEventListener("mouseout", function(){
-    thumbRight.classList.remove("hover");
-    track.classList.remove("hover");
-});
-// ------active------
-inputLeft.addEventListener("mousedown", function(){
-    thumbLeft.classList.add("active");
-});
-inputLeft.addEventListener("mouseup", function(){
-    thumbLeft.classList.remove("active");
-});
-inputRight.addEventListener("mousedown", function(){
-    thumbRight.classList.add("active");
-});
-inputRight.addEventListener("mouseup", function(){
-    thumbRight.classList.remove("active");
-});
-</script>
-
+    <script src="./range-slider.js"></script>
 </body>
 </html>
