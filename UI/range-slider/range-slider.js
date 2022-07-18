@@ -1,32 +1,32 @@
-var inputLeft = document.getElementById("input-left")
+let inputLeft = document.getElementById("input-left")
 let inputRight = document.getElementById("input-right")
 
-var thumbLeft = document.querySelector(".slider > .thumb.left")
-var thumbRight = document.querySelector(".slider > .thumb.right")
-var range = document.querySelector(".slider > .range")
-var track = document.querySelector(".slider > .track")
+let thumbLeft = document.querySelector(".slider > .thumb.left")
+let thumbRight = document.querySelector(".slider > .thumb.right")
+let range = document.querySelector(".slider > .range")
+let track = document.querySelector(".slider > .track")
 
 function setLeftValue() {
-    var _this = inputLeft,
+    let _this = inputLeft,
         min = parseInt(_this.min),
         max = parseInt(_this.max);
 
     _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value)-1)
 
-    var percent = ((_this.value - min) / (max - min)) * 100;
+    let percent = ((_this.value - min) / (max - min)) * 100;
     thumbLeft.style.left = percent + "%";
     range.style.left = percent + "%";
 }
 setLeftValue();
 
 function setRightValue() {
-    var _this = inputRight,
+    let _this = inputRight,
         min = parseInt(_this.min),
         max = parseInt(_this.max);
 
     _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value)+1)
 
-    var percent = ((_this.value - min) / (max - min)) * 100;
+    let percent = ((_this.value - min) / (max - min)) * 100;
     thumbRight.style.right =(100 - percent)  + "%";
     range.style.right = (100 - percent) + "%";
 }
@@ -49,7 +49,6 @@ function outputValues(){
     let sliderSections = document.getElementsByClassName("multi-rage-slider");
     for( let x = 0; x < sliderSections.length; x++ ){
         let sliders = sliderSections[x].getElementsByTagName("input");
-        console.log(sliders.length)
         for( let y = 0; y < sliders.length; y++ ){
             if( sliders[y].type ==="range" ){
                 sliders[y].oninput = getValues;
@@ -57,7 +56,6 @@ function outputValues(){
         }
     }
 }
-
 // ------hover------
 inputLeft.addEventListener("mouseover", function(){
     thumbLeft.classList.add("hover");
@@ -75,6 +73,7 @@ inputRight.addEventListener("mouseout", function(){
     thumbRight.classList.remove("hover");
     track.classList.remove("hover");
 });
+
 // ------active------
 inputLeft.addEventListener("mousedown", function(){
     thumbLeft.classList.add("active");

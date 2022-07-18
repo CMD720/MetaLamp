@@ -1,0 +1,83 @@
+:root {
+    --Dark_Shade_100: #1F2041;
+    --Dark_Shade_75: rgba(31, 32, 65, 0.75);
+    --Dark_Shade_50: rgba(31, 32, 65, 0.5);
+    --Dark_Shade_25: rgba(31, 32, 65, 0.25);
+    --Dark_Shade_5: rgba(31, 32, 65, 0.05);
+    --Purple: #BC9CFF;
+    --Blue: #8BA4F9;
+    --Green: #6FCF97;
+    --font_Montserrat: 'Montserrat', sans-serif;
+    --H1_size: 24px;
+    --Primary_Gradient : linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%);
+    --Secondary_Gradient : linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    --Border_Gradient : linear-gradient(#fff, #fff) padding-box ,linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: var(--font_Montserrat);
+
+    outline: 0;
+    outline-offset: 0;
+
+}
+
+.text-field-wrapper{
+    margin: 5px 5px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+
+}
+.text-field{
+    width: 288px;
+    height: 16px;
+    padding: 13px 15px;
+    background: #FFFFFF;
+    border: 1px solid var(--Dark_Shade_25);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+input::-webkit-input-placeholder{
+    color: var(--Dark_Shade_25);
+}
+input::-moz-placeholder{
+    color: var(--Dark_Shade_25);
+}
+input:-moz-placeholder{
+    color: var(--Dark_Shade_25);
+}
+/*-----------hover--------------*/
+.text-field-wrapper .text-field:hover{
+    border: 1px solid var(--Dark_Shade_50);
+}
+input:hover::-webkit-input-placeholder{
+    color: var(--Dark_Shade_75);
+}
+
+/*-----------focus-------------*/
+.text-field-wrapper .text-field:focus{
+    border: 1px solid var(--Dark_Shade_50);
+}
+input:focus::-webkit-input-placeholder{
+    color: var(--Dark_Shade_75);
+}
+
+/*-----------checked-------------*/
+.text-field-wrapper .text-field:checked{
+    border: 1px solid var(--Dark_Shade_50);
+    color: var(--Dark_Shade_75);
+}
+input:checked::-webkit-input-placeholder{
+    color: var(--Dark_Shade_75);
+}
+input:checked{
+    border: 1px solid var(--Dark_Shade_50);
+
+}

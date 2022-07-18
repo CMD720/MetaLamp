@@ -1,11 +1,11 @@
-var inputLeft = document.getElementById("input-left")
+let inputLeft = document.getElementById("input-left")
 // let inputLeft = document.querySelector('#input-left')
 let inputRight = document.getElementById("input-right")
 
-var thumbLeft = document.querySelector(".slider > .thumb.left")
-var thumbRight = document.querySelector(".slider > .thumb.right")
-var range = document.querySelector(".slider > .range")
-var track = document.querySelector(".slider > .track")
+let thumbLeft = document.querySelector(".slider > .thumb.left")
+let thumbRight = document.querySelector(".slider > .thumb.right")
+let range = document.querySelector(".slider > .range")
+let track = document.querySelector(".slider > .track")
 
 let leftVal = parseInt(inputLeft.value);
 let rightVal = parseInt(inputRight.value);
@@ -15,7 +15,6 @@ function setValue() {
    rightVal = parseInt(inputRight.value);
    if (leftVal > rightVal -1000){
       inputRight.value = leftVal +1000;
-      // setRightValue();
       if(rightVal == inputRight.max) {
          inputLeft.value = parseInt(inputRight.max) - 1000;
       }
@@ -27,23 +26,20 @@ function setValue() {
       }
    }
 
-   var _this_l = inputLeft,
+   let _this_l = inputLeft,
        min_l = parseInt(_this_l.min),
        max_l = parseInt(_this_l.max);
-   var _this_r = inputRight,
+   let _this_r = inputRight,
        min_r = parseInt(_this_r.min),
        max_r = parseInt(_this_r.max);
 
-   _this_l.value = Math.min(parseInt(_this_l.value), parseInt(inputRight.value)-1)
-
-   var percent_l = ((_this_l.value - min_l) / (max_l - min_l)) * 100;
+   _this_l.value = Math.min(parseInt(_this_l.value), parseInt(inputRight.value))
+   let percent_l = ((_this_l.value - min_l) / (max_l - min_l)) * 100;
    thumbLeft.style.left = percent_l + "%";
    range.style.left = percent_l + "%";
-   //=====================================
 
-   _this_r.value = Math.max(parseInt(_this_r.value), parseInt(inputLeft.value)+1)
-
-   var percent_r = ((_this_r.value - min_r) / (max_r - min_r)) * 100;
+   _this_r.value = Math.max(parseInt(_this_r.value), parseInt(inputLeft.value))
+   let percent_r = ((_this_r.value - min_r) / (max_r - min_r)) * 100;
    thumbRight.style.right =(100 - percent_r)  + "%";
    range.style.right = (100 - percent_r) + "%";
 }
@@ -74,7 +70,6 @@ function outputValues(){
       }
    }
 }
-
 // ------hover------
 inputLeft.addEventListener("mouseover", function(){
    thumbLeft.classList.add("hover");
@@ -92,6 +87,7 @@ inputRight.addEventListener("mouseout", function(){
    thumbRight.classList.remove("hover");
    track.classList.remove("hover");
 });
+
 // ------active------
 inputLeft.addEventListener("mousedown", function(){
    thumbLeft.classList.add("active");

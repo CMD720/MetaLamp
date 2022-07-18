@@ -7,7 +7,7 @@
     --Purple: #BC9CFF;
     --Blue: #8BA4F9;
     --Green: #6FCF97;
-    --font_Montserra: 'Montserrat', sans-serif;
+    --font_Montserrat: 'Montserrat', sans-serif;
     --H1_size: 24px;
     --Primary_Gradient : linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%);
     --Secondary_Gradient : linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -18,6 +18,6 @@
     margin: 0;
     padding: 0;
     /*box-sizing: border-box;*/
-    font-family: var(--font_Montserra);
+    font-family: var(--font_Montserrat);
 }
 
