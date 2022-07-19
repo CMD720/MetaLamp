@@ -63,8 +63,8 @@
     transition-duration: .3s;
 }
 .dropdown-menu{
-    /*display: none;*/
-    display: block;
+    display: none;
+    /*display: block;*/
     width: 318px;
     height: 159px;    /*?????*/
     background: #FFFFFF;
@@ -85,10 +85,9 @@
 .guests-number{
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 .dd-row{
-    /*border: 1px solid crimson;*/
-
     display: flex;
     width: auto;
     height: 30px;
@@ -111,12 +110,6 @@
     height: 30px;
     border-radius: 22px;
     cursor: pointer;
-    /*border: 1px solid var(--Dark_Shade_25);*/
-    /*color: var(--Dark_Shade_25);*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    /*text-align: center;*/
 }
 .minus-border-off{
     border: 1px solid var(--Dark_Shade_25);
@@ -131,24 +124,18 @@
     height: 30px;
     border-radius: 22px;
     cursor: pointer;
-    /*border: 1px solid var(--Dark_Shade_25);*/
-    /*color: var(--Dark_Shade_25);*/
 }
 .minus-children{
     width: 30px;
     height: 30px;
     border-radius: 22px;
     cursor: pointer;
-    /*border: 1px solid var(--Dark_Shade_25);*/
-    /*color: var(--Dark_Shade_25);*/
 }
 .minus-babies{
     width: 30px;
     height: 30px;
     border-radius: 22px;
     cursor: pointer;
-    /*border: 1px solid var(--Dark_Shade_25);*/
-    /*color: var(--Dark_Shade_25);*/
 }
 .plus-guest{
     width: 30px;
@@ -157,8 +144,6 @@
     border-radius: 22px;
     color: var(--Dark_Shade_50);
     cursor: pointer;
-    /*display: flex;*/
-    /*align-items: center;*/
 }
 .operand-wrapper{
     width: 30px;
@@ -170,6 +155,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.plus-guest:hover{
+    border: 1px solid var(--Dark_Shade_75);
+}
+.minus-border-on:hover{
+    border: 1px solid var(--Dark_Shade_75);
 }
 
 /*--------not-needed---???--*/

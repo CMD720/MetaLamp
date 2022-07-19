@@ -1,6 +1,3 @@
-// let guest = document.getElementsByClassName("dropdown-span-text");
-// guest.innerHTML = defaultGuest;
-let dropDown = document.getElementsByClassName("dropdown");
 let dropdownOnOff = false;
 
 let dropDownMenu = document.querySelector(".dropdown-menu");
@@ -21,7 +18,7 @@ let babiesCount = 0;
 let checkGuest = false;
 
 function guestCount(){
-    let defaultGuest = "Сколько гостей";
+    let defaultGuest = "Количество комнат";
     let resultGuest = adultCount + childrenCount;
 
 
@@ -79,7 +76,7 @@ function addGuest(adultMarker ,childrenMarker ,babiesMarker) {
 function removeGuest(adultMarker ,childrenMarker ,babiesMarker) {
     if(adultMarker){
         if(adultCount==0){
-            return;
+            // return;
         }else{
                 adultCount = adultCount - 1;
                 guestOptions(adultCount ,childrenCount ,babiesCount);
@@ -87,7 +84,7 @@ function removeGuest(adultMarker ,childrenMarker ,babiesMarker) {
              }
     }else if(childrenMarker){
         if(childrenCount==0){
-            return;
+            // return;
         }else{
                 childrenCount = childrenCount - 1;
                 guestOptions(adultCount ,childrenCount ,babiesCount);
@@ -95,7 +92,7 @@ function removeGuest(adultMarker ,childrenMarker ,babiesMarker) {
         }
     }else if(babiesMarker){
         if(babiesCount==0){
-            return;
+            // return;
         }else{
                 babiesCount = babiesCount - 1;
                 guestOptions(adultCount ,childrenCount ,babiesCount);
@@ -141,8 +138,5 @@ function clearGuests() {
     babiesCount = 0;
     guestOptions(adultCount ,childrenCount ,babiesCount);
     buttonBorder(adultCount ,childrenCount ,babiesCount);
+    guestCount();
 }
-
-// function accept() {
-//     let resultGuest = adultCount + childrenCount;
-// }
