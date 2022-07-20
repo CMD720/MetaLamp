@@ -23,13 +23,13 @@
     outline-offset: 0;
 }
 
-.dropdown-wrapper{
+.dropdown-comfort-wrapper{
     margin: 5px 5px;
     height: 100%;
     width: 100%;
 }
-.dropdown{
-    width: 318px;
+.dropdown-comfort{
+    width: 264px;
     height: 42px;
     background: #FFFFFF;
     border: 1px solid var(--Dark_Shade_25);
@@ -37,7 +37,7 @@
     display: flex;
     cursor: pointer;
 }
-.dropdown-text{
+.dropdown-comfort-text{
     padding: 8px 14px;
     width: 100%;
     font-style: normal;
@@ -46,12 +46,12 @@
     line-height: 24px;
     color: var(--Dark_Shade_75);
 }
-.arrow-wrapper{
+.arrow-comfort-wrapper{
     width: 42px;
     height: 42px;
     position: relative;
 }
-.arrow{
+.arrow-comfort{
     position: absolute;
     top: 34%;
     left: 26%;
@@ -62,11 +62,11 @@
     transform: rotate(45deg);
     transition-duration: .3s;
 }
-.dropdown-menu{
+.dropdown-comfort-menu{
     /*display: none;*/
     display: block;
-    width: 318px;
-    height: 159px;    /*?????*/
+    width: 264px;
+    height: 117px;    /*?????*/
     background: #FFFFFF;
     border: 1px solid var(--Dark_Shade_50);
     border-top: none;
@@ -76,24 +76,24 @@
     transform: translateY(0);
     transition: all 1s ease-in;
 }
-.dropdown-wrapper:hover .dropdown{
+.dropdown-comfort-wrapper:hover .dropdown-comfort{
     border: 1px solid var(--Dark_Shade_50);
 }
 
 /*---------------dropdown--menu------------------*/
 
-.guests-number{
+.comforts-number{
     display: flex;
     flex-direction: column;
     user-select: none;
 }
-.dd-row{
+.dd-comfort-row{
     display: flex;
     width: auto;
     height: 30px;
     margin: 7px 7px 0 15px;
 }
-.guest{
+.comfort{
     display: flex;
     align-items: center;
     width: 100%;
@@ -105,39 +105,33 @@
     text-transform: uppercase;
     color: var(--Dark_Shade_100);
 }
-.minus-guest{
-    width: 30px;
-    height: 30px;
-    border-radius: 22px;
-    cursor: pointer;
-}
-.minus-border-off{
+.minus-comfort-border-off{
     border: 1px solid var(--Dark_Shade_25);
     color: var(--Dark_Shade_25);
 }
-.minus-border-on{
+.minus-comfort-border-on{
     border: 1px solid var(--Dark_Shade_50);
     color: var(--Dark_Shade_50);
 }
-.minus-adult{
+.minus-bedrooms{
     width: 30px;
     height: 30px;
     border-radius: 22px;
     cursor: pointer;
 }
-.minus-children{
+.minus-beds{
     width: 30px;
     height: 30px;
     border-radius: 22px;
     cursor: pointer;
 }
-.minus-babies{
+.minus-bathrooms{
     width: 30px;
     height: 30px;
     border-radius: 22px;
     cursor: pointer;
 }
-.plus-guest{
+.plus-comfort{
     width: 30px;
     height: 30px;
     border: 1px solid var(--Dark_Shade_50);
@@ -145,7 +139,7 @@
     color: var(--Dark_Shade_50);
     cursor: pointer;
 }
-.operand-wrapper{
+.operand-comfort-wrapper{
     width: 30px;
     height: 30px;
     font-style: normal;
@@ -156,22 +150,13 @@
     align-items: center;
     justify-content: center;
 }
-.plus-guest:hover{
+.plus-comfort:hover{
     border: 1px solid var(--Dark_Shade_75);
 }
-.minus-border-on:hover{
+.minus-comfort-border-on:hover{
     border: 1px solid var(--Dark_Shade_75);
 }
-
-/*--------not-needed---???--*/
-.number-wrapper{
-    /*width: 30px;*/
-    /*height: 30px;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*border: 1px solid var(--Dark_Shade_25);*/
-}
-.number{
+.comfort-number{
     width: 30px;
     height: 30px;
     display: flex;
@@ -185,24 +170,32 @@
     color: var(--Dark_Shade_100);
 }
 
-.buttons-clear-accept{
-    display: flex;
-    justify-content: space-between;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: var(--Purple);
-    margin: 17px 7px 13px 14px;
-}
-.clear{
-    opacity: 0;
-    cursor: pointer;
-    padding-top: 3px;
-}
-.accept{
-    cursor: pointer;
-    padding-top: 3px;
+/*.buttons-clear-accept-comfort{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    font-style: normal;*/
+/*    font-weight: 700;*/
+/*    font-size: 12px;*/
+/*    line-height: 15px;*/
+/*    text-transform: uppercase;*/
+/*    color: var(--Purple);*/
+/*    margin: 17px 7px 13px 14px;*/
+/*}*/
+/*.clear-comfort{*/
+/*    padding-top: 3px;*/
+/*    !*opacity: 0;*!*/
+/*    !*cursor: auto;*!*/
+/*}*/
+/*.clear-comfort-on{*/
+/*    opacity: 1;*/
+/*    cursor: pointer;*/
+/*}*/
+/*.clear-comfort-off{*/
+/*    opacity: 0;*/
+/*    cursor: auto;*/
+/*}*/
+/*.accept-comfort{*/
+/*    cursor: pointer;*/
+/*    padding-top: 3px;*/
 
-}
+/*}*/

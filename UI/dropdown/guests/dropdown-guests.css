@@ -23,12 +23,12 @@
     outline-offset: 0;
 }
 
-.dropdown-wrapper{
+.dropdown-guest-wrapper{
     margin: 5px 5px;
     height: 100%;
     width: 100%;
 }
-.dropdown{
+.dropdown-guest{
     width: 318px;
     height: 42px;
     background: #FFFFFF;
@@ -37,7 +37,7 @@
     display: flex;
     cursor: pointer;
 }
-.dropdown-text{
+.dropdown-guest-text{
     padding: 8px 14px;
     width: 100%;
     font-style: normal;
@@ -46,12 +46,12 @@
     line-height: 24px;
     color: var(--Dark_Shade_75);
 }
-.arrow-wrapper{
+.arrow-guest-wrapper{
     width: 42px;
     height: 42px;
     position: relative;
 }
-.arrow{
+.arrow-guest{
     position: absolute;
     top: 34%;
     left: 26%;
@@ -62,7 +62,7 @@
     transform: rotate(45deg);
     transition-duration: .3s;
 }
-.dropdown-menu{
+.dropdown-guest-menu{
     display: none;
     /*display: block;*/
     width: 318px;
@@ -76,7 +76,7 @@
     transform: translateY(0);
     transition: all 1s ease-in;
 }
-.dropdown-wrapper:hover .dropdown{
+.dropdown-guest-wrapper:hover .dropdown-guest{
     border: 1px solid var(--Dark_Shade_50);
 }
 
@@ -87,7 +87,7 @@
     flex-direction: column;
     user-select: none;
 }
-.dd-row{
+.dd-guest-row{
     display: flex;
     width: auto;
     height: 30px;
@@ -105,12 +105,12 @@
     text-transform: uppercase;
     color: var(--Dark_Shade_100);
 }
-.minus-guest{
-    width: 30px;
-    height: 30px;
-    border-radius: 22px;
-    cursor: pointer;
-}
+/*.minus-guest{*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    border-radius: 22px;*/
+/*    cursor: pointer;*/
+/*}*/
 .minus-border-off{
     border: 1px solid var(--Dark_Shade_25);
     color: var(--Dark_Shade_25);
@@ -145,7 +145,7 @@
     color: var(--Dark_Shade_50);
     cursor: pointer;
 }
-.operand-wrapper{
+.operand-guest-wrapper{
     width: 30px;
     height: 30px;
     font-style: normal;
@@ -171,7 +171,7 @@
     /*align-items: center;*/
     /*border: 1px solid var(--Dark_Shade_25);*/
 }
-.number{
+.guest-number{
     width: 30px;
     height: 30px;
     display: flex;
@@ -185,7 +185,7 @@
     color: var(--Dark_Shade_100);
 }
 
-.buttons-clear-accept{
+.buttons-clear-accept-guest{
     display: flex;
     justify-content: space-between;
     font-style: normal;
@@ -196,12 +196,20 @@
     color: var(--Purple);
     margin: 17px 7px 13px 14px;
 }
-.clear{
-    opacity: 0;
-    cursor: pointer;
+.clear-guest{
     padding-top: 3px;
+    /*opacity: 0;*/
+    /*cursor: auto;*/
 }
-.accept{
+.clear-guest-on{
+    opacity: 1;
+    cursor: pointer;
+}
+.clear-guest-off{
+    opacity: 0;
+    cursor: auto;
+}
+.accept-guest{
     cursor: pointer;
     padding-top: 3px;
 

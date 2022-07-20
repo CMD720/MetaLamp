@@ -12,54 +12,54 @@
 </head>
 <body>
 
-<div class="dropdown-wrapper" >
-    <div class="dropdown" onclick="dropDownOnOff()">
-        <div class="dropdown-text"></div>
-        <div class="arrow-wrapper">
-            <div class="arrow"></div>
+<div class="dropdown-guest-wrapper" >
+    <div class="dropdown-guest" onclick="dropDownOnOff()">
+        <div class="dropdown-guest-text"></div>
+        <div class="arrow-guest-wrapper">
+            <div class="arrow-guest"></div>
         </div>
     </div>
-    <div class="dropdown-menu">
+    <div class="dropdown-guest-menu">
         <div class="guests-number">
-            <div class="dd-row">
+            <div class="dd-guest-row">
                 <div class="guest">взрослые</div>
                 <div id="adult" class="minus-adult minus-border-off">
-                    <div class="operand-wrapper" onclick="removeGuest(true, false, false)">-</div>
+                    <div class="operand-guest-wrapper" onclick="removeGuest(true, false, false)">-</div>
                 </div>
                 <div class="number-wrapper">
-                    <div class="number"><span class="adult"></span></div>
+                    <div class="guest-number"><span class="adult"></span></div>
                 </div>
                 <div class="plus-guest">
-                    <div class="operand-wrapper" onclick="addGuest(true, false, false)">+</div>
+                    <div class="operand-guest-wrapper" onclick="addGuest(true, false, false)">+</div>
                 </div>
             </div>
-            <div class="dd-row">
+            <div class="dd-guest-row">
                 <div class="guest">дети</div>
                 <div class="minus-children minus-border-off">
-                    <div class="operand-wrapper" onclick="removeGuest(false, true, false)">-</div>
+                    <div class="operand-guest-wrapper" onclick="removeGuest(false, true, false)">-</div>
                 </div>
                 <div class="number-wrapper">
-                    <div class="number"><span class="children"></span></div>
+                    <div class="guest-number"><span class="children"></span></div>
                 </div>
                 <div class="plus-guest">
-                    <div class="operand-wrapper" onclick="addGuest(false, true, false)">+</div>
+                    <div class="operand-guest-wrapper" onclick="addGuest(false, true, false)">+</div>
                 </div>
             </div>
-            <div class="dd-row">
+            <div class="dd-guest-row">
                 <div class="guest">младенцы</div>
                 <div class="minus-babies minus-border-off">
-                    <div class="operand-wrapper" onclick="removeGuest(false, false, true)">-</div>
+                    <div class="operand-guest-wrapper" onclick="removeGuest(false, false, true)">-</div>
                 </div>
                 <div class="number-wrapper">
-                    <div class="number"><span class="babies"></span></div>
+                    <div class="guest-number"><span class="babies"></span></div>
                 </div>
                 <div class="plus-guest">
-                    <div class="operand-wrapper" onclick="addGuest(false, false, true)">+</div>
+                    <div class="operand-guest-wrapper" onclick="addGuest(false, false, true)">+</div>
                 </div>
             </div>
-            <div class="buttons-clear-accept">
-                <div class="clear" onclick="clearGuests()">сбросить</div>
-                <div class="accept" onclick="guestCount()">применить</div>
+            <div class="buttons-clear-accept-guest">
+                <div class="clear-guest clear-guest-off" onclick="clearGuests()">сбросить</div>
+                <div class="accept-guest" onclick="guestCount()">применить</div>
             </div>
         </div>
     </div>

@@ -1,14 +1,14 @@
 let dropdownOnOff = false;
 
-let dropDownMenu = document.querySelector(".dropdown-menu");
-let borderDropdown = document.querySelector(".dropdown");
+let dropDownMenu = document.querySelector(".dropdown-guest-menu");
+let borderDropdown = document.querySelector(".dropdown-guest");
 
 let adultBorder = document.querySelector(".minus-adult");
 let childrenBorder = document.querySelector(".minus-children");
 let babiesBorder = document.querySelector(".minus-babies");
-let clearVisible = document.querySelector(".clear")
+let clearVisible = document.querySelector(".clear-guest")
 
-let guest = document.getElementsByClassName("dropdown-text")[0];
+let guest = document.getElementsByClassName("dropdown-guest-text")[0];
 let adult = document.getElementsByClassName("adult")[0];
 let children = document.getElementsByClassName("children")[0];
 let babies = document.getElementsByClassName("babies")[0];
@@ -103,11 +103,17 @@ function removeGuest(adultMarker ,childrenMarker ,babiesMarker) {
 
 function buttonBorder(adultCount ,childrenCount ,babiesCount) {
     if(adultCount==0 && childrenCount==0 && babiesCount==0){
-        clearVisible.style.opacity = "0";
+        // clearVisible.style.opacity = "0";
+        // clearVisible.style.cursor = "none";
+        clearVisible.classList.remove('clear-guest-on');
+        clearVisible.classList.add('clear-guest-off');
         checkGuest = false;
     }else {
-            clearVisible.style.opacity = "1";
-            checkGuest = true;
+            // clearVisible.style.opacity = "1";
+            // clearVisible.style.cursor = "pointer";
+            clearVisible.classList.remove('clear-guest-off');
+            clearVisible.classList.add('clear-guest-on');
+        checkGuest = true;
           }
 
     if (adultCount !=0){
