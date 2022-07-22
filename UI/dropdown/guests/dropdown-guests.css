@@ -62,8 +62,8 @@
     position: absolute;
     top: 34%;
     left: 26%;
-    border-right: 2px solid var(--Dark_Shade_50);
-    border-bottom: 2px solid var(--Dark_Shade_50);
+    border-right: 2px solid var(--Dark_Shade_75);
+    border-bottom: 2px solid var(--Dark_Shade_75);
     width: 7px;
     height: 7px;
     transform: rotate(45deg);

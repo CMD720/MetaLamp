@@ -24,7 +24,11 @@ let bedroomsString = "";
 let bedsString = "";
 let bathroomsString = "";
 
-
+function nullString(){
+     bedroomsString = "";
+     bedsString = "";
+     bathroomsString = "";
+}
 function comfortSelected() {
     let defaultComfort = "Удобства номера";
     if (checkComfort) {

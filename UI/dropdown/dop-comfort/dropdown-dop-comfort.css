@@ -1,0 +1,153 @@
+:root {
+    --Dark_Shade_100: #1F2041;
+    --Dark_Shade_75: rgba(31, 32, 65, 0.75);
+    --Dark_Shade_50: rgba(31, 32, 65, 0.5);
+    --Dark_Shade_25: rgba(31, 32, 65, 0.25);
+    --Dark_Shade_5: rgba(31, 32, 65, 0.05);
+    --Purple: #BC9CFF;
+    --Blue: #8BA4F9;
+    --Green: #6FCF97;
+    --font_Montserrat: 'Montserrat', sans-serif;
+    --H1_size: 24px;
+    --Primary_Gradient: linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%);
+    --Secondary_Gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    --Border_Gradient: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, var(--Purple) 0%, var(--Blue) 100%) border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-family: var(--font_Montserrat);
+    outline: 0;
+    outline-offset: 0;
+}
+
+.dropdown-dop-comfort-wrapper {
+    margin: 5px 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.dropdown-dop-comfort {
+    width: 266px;
+    height: 44px;
+    background: #FFFFFF;
+    display: flex;
+    cursor: pointer;
+}
+
+.dropdown-dop-comfort-text {
+    width: 100%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--Dark_Shade_100);
+    align-self: center;
+    user-select: none;
+}
+
+.arrow-dop-comfort-wrapper {
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+.arrow-dop-comfort {
+    position: absolute;
+    top: 38%;
+    left: 26%;
+    border-right: 2px solid var(--Dark_Shade_50);
+    border-bottom: 2px solid var(--Dark_Shade_50);
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    transition-duration: .3s;
+}
+
+.dropdown-dop-comfort-menu {
+    /*display: none;*/
+    display: block;
+    width: 100%;
+    height: 171px;
+    background: #FFFFFF;
+    user-select: none;
+}
+.dropdown-dop-comfort-row-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-comfort-wrapper:hover .arrow-comfort {
+    border-right: 2px solid var(--Dark_Shade_100);
+    border-bottom: 2px solid var(--Dark_Shade_100);
+}
+
+/*---------------dropdown--menu----------------*/
+.dd-dop-comfort-row {
+    display: flex;
+    width: auto;
+    height: 30px;
+
+}
+/*---------------check--box-------------------*/
+.check {
+    padding-left: 30px;
+    margin: 2px 0 10px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--Dark_Shade_50);
+    height: 129%;
+    /*cursor: pointer;*/
+}
+
+.check__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.check__box {
+    margin-left: -30px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border: 1px solid var(--Dark_Shade_25);
+    border-radius: 4px;
+}
+
+.check__box__tick {
+    display: none;
+    position: absolute;
+    right: 6px;
+    top: 4px;
+    width: 4px;
+    height: 6px;
+    border-right: 2px solid var(--Purple);
+    border-bottom: 2px solid var(--Purple);
+    transform: rotate(45deg);
+}
+
+/*CHECKED*/
+.check__input:checked + .check__box .check__box__tick {
+    display: block;
+}
+.check__input:checked + .check__box {
+    border: 1px solid var(--Purple);
+}
+
+/*FOCUSED*/
+.check__input:focus + .check__box {
+    border: 1px solid var(--Purple);
+}
+
+/*HOVER*/
+.check__input:hover + .check__box {
+    border: 1px solid var(--Purple);
+}
+

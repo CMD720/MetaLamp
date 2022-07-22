@@ -78,10 +78,10 @@
     border: 1px solid var(--Purple);
 }
 
-/*FOCUSED*/
-/*.check__input:focus + .check__box {*/
-/*    border: 1px solid var(--Purple);*/
-/*}*/
+FOCUSED
+.check__input:focus + .check__box {
+    border: 1px solid var(--Purple);
+}
 
 /*HOVER*/
 .check__input:hover + .check__box {
