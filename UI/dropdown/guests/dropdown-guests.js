@@ -17,16 +17,19 @@ let childrenCount = 0;
 let babiesCount = 0;
 let checkGuest = false;
 
+const guestOutput = ['гость','гостя','гостя','гостя','гостей','гостей','гостей','гостей','гостей','гостей'];
+const babiesOutput = ['младенец','младенца','младенца','младенца','младенцев','младенцев','младенцев','младенцев','младенцев','младенцев'];
+let guestString = '';
+let babiesString = '';
+
 function guestCount(){
     let defaultGuest = "Сколько гостей";
     let resultGuest = adultCount + childrenCount;
 
-
     if(checkGuest){
-        if(babiesCount!=0){
-            guest.innerHTML = resultGuest + " гостя, " + babiesCount + " младенец";
-        }else {guest.innerHTML = resultGuest + " гостя";}
-        // some actions
+        if(resultGuest!==0) guestString = resultGuest + " " + guestOutput[resultGuest-1];
+        if(babiesCount !==0) babiesString =" " + babiesCount + " " + babiesOutput[babiesCount-1];
+        guest.innerHTML = guestString + babiesString;
     }else{
         guest.innerHTML = defaultGuest;
     }
@@ -37,16 +40,13 @@ function dropDownOnOff(){
 
     if(dropdownOnOff){
         dropDownMenu.style.display = "none";
-        // dropDownMenu.style.transform = "translateY(-3em)"
-        borderDropdown.style.border = "1px solid var(--Dark_Shade_25)";
-        borderDropdown.style.borderRadius = "4px";
+        borderDropdown.classList.remove("dropdown-guest-border-on")
+        borderDropdown.classList.add("dropdown-guest-border-off")
         dropdownOnOff = false;
     }else{
         dropDownMenu.style.display = "block";
-        borderDropdown.style.border = "1px solid var(--Dark_Shade_50)";
-        borderDropdown.style.borderRadius = "0";
-        borderDropdown.style.borderTopLeftRadius = "4px";
-        borderDropdown.style.borderTopRightRadius = "4px";
+        borderDropdown.classList.remove("dropdown-guest-border-off")
+        borderDropdown.classList.add("dropdown-guest-border-on")
         dropdownOnOff = true;
     }
 }
@@ -75,7 +75,7 @@ function addGuest(adultMarker ,childrenMarker ,babiesMarker) {
 }
 function removeGuest(adultMarker ,childrenMarker ,babiesMarker) {
     if(adultMarker){
-        if(adultCount==0){
+        if(adultCount===0){
             // return;
         }else{
                 adultCount = adultCount - 1;
@@ -83,7 +83,7 @@ function removeGuest(adultMarker ,childrenMarker ,babiesMarker) {
                 buttonBorder(adultCount ,childrenCount ,babiesCount);
              }
     }else if(childrenMarker){
-        if(childrenCount==0){
+        if(childrenCount===0){
             // return;
         }else{
                 childrenCount = childrenCount - 1;
@@ -91,7 +91,7 @@ function removeGuest(adultMarker ,childrenMarker ,babiesMarker) {
                 buttonBorder(adultCount ,childrenCount ,babiesCount);
         }
     }else if(babiesMarker){
-        if(babiesCount==0){
+        if(babiesCount===0){
             // return;
         }else{
                 babiesCount = babiesCount - 1;
@@ -102,35 +102,31 @@ function removeGuest(adultMarker ,childrenMarker ,babiesMarker) {
 }
 
 function buttonBorder(adultCount ,childrenCount ,babiesCount) {
-    if(adultCount==0 && childrenCount==0 && babiesCount==0){
-        // clearVisible.style.opacity = "0";
-        // clearVisible.style.cursor = "none";
+    if(adultCount===0 && childrenCount===0 && babiesCount===0){
         clearVisible.classList.remove('clear-guest-on');
         clearVisible.classList.add('clear-guest-off');
         checkGuest = false;
     }else {
-            // clearVisible.style.opacity = "1";
-            // clearVisible.style.cursor = "pointer";
-            clearVisible.classList.remove('clear-guest-off');
-            clearVisible.classList.add('clear-guest-on');
+        clearVisible.classList.remove('clear-guest-off');
+        clearVisible.classList.add('clear-guest-on');
         checkGuest = true;
           }
 
-    if (adultCount !=0){
+    if (adultCount !==0){
         adultBorder.classList.remove('minus-border-off');
         adultBorder.classList.add('minus-border-on');
     }else{
         adultBorder.classList.remove('minus-border-on');
         adultBorder.classList.add('minus-border-off');
     }
-    if (childrenCount !=0){
+    if (childrenCount !==0){
         childrenBorder.classList.remove('minus-border-off');
         childrenBorder.classList.add('minus-border-on');
     }else{
         childrenBorder.classList.remove('minus-border-on');
         childrenBorder.classList.add('minus-border-off');
     }
-    if (babiesCount !=0){
+    if (babiesCount !==0){
         babiesBorder.classList.remove("minus-border-off");
         babiesBorder.classList.add("minus-border-on");
     }else{
@@ -142,6 +138,8 @@ function clearGuests() {
     adultCount = 0;
     childrenCount = 0;
     babiesCount = 0;
+    guestString = '';
+    babiesString = '';
     guestOptions(adultCount ,childrenCount ,babiesCount);
     buttonBorder(adultCount ,childrenCount ,babiesCount);
     guestCount();
